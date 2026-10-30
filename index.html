@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111b16">
+  <script>try{const t=localStorage.getItem("hawsa-theme");document.documentElement.dataset.theme=t==="light"?"light":"dark"}catch(_){}</script>
+  <meta name="description" content="هَوْسا: مساحة عربية لتعلّم أساسيات لغة الهوسا من خلال دروس وقواعد ومفردات وإملاء وتكوين جمل واختبارات بعد الدروس.">
+  <title>هَوْسا | تعلّم الهوسا بالعربية</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="curriculum-plus.js" defer></script>
+  <script src="exercise-bank.js" defer></script>
+  <script src="regional.js" defer></script>
+  <script src="audio-manifest.js" defer></script>
+  <script src="activities.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="mobile-backdrop" id="mobile-backdrop" aria-hidden="true"></div>
+  <aside class="sidebar" id="sidebar" aria-label="التنقل الرئيسي">
+    <a class="brand" href="#/home" aria-label="هَوْسا - الرئيسية">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none"><path d="M22 4c7.6 0 13.6 5.5 13.6 12.4 0 4-2 7.5-5.2 9.8l.8 6.3-6-3.6c-1 .2-2.1.3-3.2.3-7.6 0-13.6-5.6-13.6-12.8C8.4 9.5 14.4 4 22 4Z" fill="currentColor"/><path d="M15.1 16.4h13.8M22 9.7v13.5" stroke="#f6eecf" stroke-width="2.7" stroke-linecap="round"/><path d="M10 32.5c4.5 1 8.1 3.7 12 6.5 3.8-2.8 7.4-5.4 12-6.5" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span>
+      <span class="brand-type"><strong>هَوْسا</strong><small>تعلّمها، وتواصل بها</small></span>
+    </a>
+    <div class="side-divider"></div>
+    <div class="nav-label">مساحة التعلّم</div>
+    <nav class="side-nav" id="side-nav">
+      <a href="#/home" data-nav="home"><span data-icon="grid"></span><span>الرئيسية</span></a>
+      <a href="#/path" data-nav="path"><span data-icon="route"></span><span>مسار التعلّم</span></a>
+      <a href="#/dialects" data-nav="dialects"><span data-icon="globe"></span><span>اللهجات المحلية</span></a>
+      <a href="#/grammar" data-nav="grammar"><span data-icon="book"></span><span>القواعد</span></a>
+      <a href="#/words" data-nav="words"><span data-icon="layers"></span><span>المفردات</span></a>
+      <a href="#/audio" data-nav="audio"><span data-icon="headphones"></span><span>النطق والاستماع</span></a>
+      <a href="#/practice" data-nav="practice"><span data-icon="pencil"></span><span>التدريبات</span></a>
+      <a href="#/dictation" data-nav="dictation"><span data-icon="headphones"></span><span>الإملاء</span></a>
+      <a href="#/sentences" data-nav="sentences"><span data-icon="message"></span><span>تكوين الجمل</span></a>
+      <a href="#/review" data-nav="review"><span data-icon="award"></span><span>تقدّمي وأخطائي</span></a>
+      <a href="#/saved" data-nav="saved"><span data-icon="bookmark"></span><span>المحفوظات</span><span class="nav-count" id="saved-count" hidden>0</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-progress">
+        <div class="side-progress-icon" data-icon="sparkles"></div>
+        <p class="side-progress-title">خطوة صغيرة كل يوم.</p>
+        <p class="side-progress-desc">كل درس تقرّبك أكثر من التحدث بثقة.</p>
+        <div class="side-progress-line"><span>تقدّمك في المسار</span><b id="side-percent">٠٪</b></div>
+        <div class="progress-track light"><span id="side-progress-fill"></span></div>
+      </div>
+      <a class="side-source" href="#/sources"><span data-icon="info"></span><span>عن المحتوى والمصادر</span><span class="source-arrow" data-icon="arrowUpLeft"></span></a>
+      <div class="side-user"><div class="user-avatar">م</div><div><strong>متعلّم الهوسا</strong><small>المستوى التأسيسي</small></div><span class="online-dot" title="التقدم محفوظ محليًا"></span></div>
+    </div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="topbar-start">
+        <button type="button" class="icon-button menu-toggle" id="menu-toggle" aria-label="فتح القائمة" aria-expanded="false" aria-controls="sidebar"><span data-icon="menu"></span></button>
+        <div class="breadcrumbs"><span>مساحة التعلّم</span><span class="crumb-separator">/</span><strong id="page-name">الرئيسية</strong></div>
+      </div>
+      <div class="topbar-end">
+        <form class="top-search" id="global-search-form" role="search"><span data-icon="search"></span><input id="global-search" type="search" placeholder="ابحث عن كلمة بالهوسا..." aria-label="ابحث عن مفردة"><kbd>↵</kbd></form>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="تفعيل الوضع الفاتح" title="تفعيل الوضع الفاتح"><span class="theme-icon" aria-hidden="true"></span><span class="theme-label">الوضع الفاتح</span><span class="theme-short" aria-hidden="true">فاتح</span></button>
+        <span class="header-language"><span class="language-dot"></span> العربية <span class="lang-separator">/</span> <span lang="ha" dir="ltr">Hausa</span></span>
+        <a class="top-avatar" href="#/saved" aria-label="الانتقال إلى المحفوظات">م</a>
+      </div>
+    </header>
+    <main id="app" tabindex="-1"><div class="loading-state">جارٍ تحضير مساحة التعلّم...</div></main>
+    <footer class="site-footer"><span>صُنع للتعلّم، كلمةً بكلمة <span class="footer-heart">♥</span></span><span><a href="#/sources">المصادر وحدود المحتوى</a> <span class="footer-dot">·</span> التقدّم محفوظ على جهازك</span></footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">يحتاج هذا الموقع إلى تفعيل JavaScript لعرض الدروس والتمارين.</div></noscript>
+</body>
+</html>
